@@ -189,11 +189,11 @@ KG.supportedSites = {
 
 KG.preferences = {
 	general: {
-		quality_order: "1080, 720, 480, 360",
+		quality_order: "720, 480, 360",
 	},
 	internet_download_manager: {
-		idm_path: "C:\\Program Files (x86)\\Internet Download Manager\\IDMan.exe",
-		arguments: "",
+		idm_path: "C:\\Program Files\\Internet Download Manager\\IDMan.exe",
+		arguments: "/a",
 		keep_title_in_episode_name: false,
 	},
 	compatibility: {
@@ -788,7 +788,7 @@ KG.exporters.idmbat = {
 set title=${title}
 set idm=${KG.preferences.internet_download_manager.idm_path}
 set args=${KG.preferences.internet_download_manager.arguments}
-set dir=%~dp0
+set dir=E:\\Downloads\\Anime\\
 if not exist "%idm%" echo IDM not found && echo check your IDM path in preferences && pause && goto eof
 mkdir "%title%" > nul
 start "" "%idm%"
